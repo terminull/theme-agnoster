@@ -258,6 +258,7 @@ end
 # ===========================
 
 function fish_prompt
+  echo -e -n -s (soji_header) "\n"
   set -g RETVAL $status
   prompt_status
   prompt_virtual_env
