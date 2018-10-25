@@ -253,12 +253,15 @@ function prompt_status -d "the symbols for a non zero exit status, root and back
     end
 end
 
+function prompt_soji
+  prompt_segment $color_dir_bg $color_dir_str (echo -e -n -s (soji_header) "\n")
+end
+
 # ===========================
 # Apply theme
 # ===========================
 
 function fish_prompt
-  echo -e -n -s (soji_header) "\n"
   set -g RETVAL $status
   prompt_status
   prompt_virtual_env
